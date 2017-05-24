@@ -1,0 +1,153 @@
+body{
+	background-color:#e2e2e2;
+}
+header{
+	width:100%;
+	position:fixed;
+	height:50px;
+	background-color:#ccc;
+	overflow:hidden;
+	z-index:2;
+	box-sizing:border-box;
+}
+
+.page-content{
+	padding-top:50px;
+}
+
+.page-content .main-carousel{
+	width:100vw;
+	height:400px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+}
+
+.page-content .main-carousel .carousel-next,
+.page-content .main-carousel .carousel-prev{
+	position:absolute;
+	top:50%;
+	padding:20px;
+	background-color:rgba(200,200,200,1);
+	cursor:pointer;
+	margin-top:-25px;
+}
+
+.page-content .main-carousel .carousel-next{
+	right:0;
+}
+
+.page-content .main-carousel .carousel-prev{
+	left:0;
+}
+
+.page-content .main-carousel .carousel-cells{
+	width:99999px;
+	height:100%;
+
+}
+
+.page-content .main-carousel .carousel-cells article{
+	width:100vw;
+	height:100%;
+	float:left;
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+/* NEW CSS */
+.carousel-prev {
+	display: none;
+}
+
+.page-content .main-carousel .carousel-cells{
+	background-color: #f9f9f9;
+}
+
+.slide-next {
+	animation-name:slider-next;
+	animation-duration:1s;
+	animation-timing-function: ease-in-out;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slider-next {
+	0% { transform: translateX(0px); }
+	100% { transform: translateX(-100%); }
+}
+
+.slide-prev {
+	animation-name:slider-prev;
+	animation-duration:1s;
+	animation-timing-function: ease-in-out;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slider-prev {
+	0% { transform: translateX(0px); }
+	100% { transform: translateX(100%); }
+}
+
+.page-content .slide-text {
+	width: 100%;
+	text-align: center;
+}
+
+.page-content .slide-text h1 {
+	font-size: 40px;	
+}
+
+@media screen and (max-width:768px) {
+	aside.list-block {
+		float: left;
+		width: 33%;
+	}
+}
+
+aside.list-block ul {
+	list-style-type: none;
+}
+
+h2.logo {
+	font-size: 30px;
+	padding: 8px;
+}
+
+nav {float: right;}
+
+nav ul {
+	margin: 6px;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 10px;
+	background-color: #e2e2e2;
+}
+
+.column-content h1 {
+	padding: 10px 0 0 10px;
+	font-size: 18px;
+}
+
+aside.list-block {
+	float: left;
+	width: 24%;
+	padding-left:10px;
+}
+
+aside.list-block h3 {
+	margin: 10px 0;
+}
